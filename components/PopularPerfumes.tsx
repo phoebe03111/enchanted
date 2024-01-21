@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
+import PopularPerfumesCarousel from "./PopularPerfumesCarousel";
 
 const getProducts = async () => {
   const data = await prisma.product.findMany({
@@ -26,7 +27,7 @@ const PopularPerfumes = async () => {
           Your Favorite Perfumes In One Place.
         </p>
 
-        {/* PopularPerfumesCarousel */}
+        <PopularPerfumesCarousel products={products} />
 
         <Link href="/our-bikes">
           <button className="btn btn-accent mx-auto">See all perfumes</button>

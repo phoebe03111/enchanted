@@ -23,7 +23,7 @@ const PerfumeByCategories = ({ products }: PerfumeByCategoriesProps) => {
       const categoryMatch =
         category === "all"
           ? products
-          : product.categories.some((cat: any) => cat.name === category);
+          : product.categories.some((cat) => cat.name === category);
       const priceMatch = product.price <= price;
       return categoryMatch && priceMatch;
     });
@@ -94,7 +94,7 @@ const PerfumeByCategories = ({ products }: PerfumeByCategoriesProps) => {
           {/* Perfume list */}
           <div className="w-full xl:w-[1050px] ml-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
-              {filteredProducts.map((product: any) => (
+              {filteredProducts.map((product) => (
                 <Perfume key={product.id} product={product} />
               ))}
             </div>

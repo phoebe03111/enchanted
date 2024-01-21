@@ -8,7 +8,11 @@ const links = [
   { name: "Our Perfumes", path: "/our-perfumes" },
 ];
 
-const Nav = ({ containerStyles }: any) => {
+interface NavProps {
+  containerStyles: string;
+}
+
+const Nav = ({ containerStyles }: NavProps) => {
   const pathname = usePathname();
 
   return (

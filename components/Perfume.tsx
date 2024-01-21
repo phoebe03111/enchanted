@@ -40,6 +40,12 @@ const Perfume = ({ product }: PerfumeProps) => {
         {/* Buttons */}
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
           <AddToCartBtn
+            priceId={product.stripe_price_id!}
+            name={product.name}
+            currency="CAD"
+            brand={product.brand}
+            image={product.image}
+            price={product.price}
             btnStyles="btn-icon btn-accent"
             icon={<ShoppingBag />}
           />

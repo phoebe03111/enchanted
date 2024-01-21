@@ -18,7 +18,7 @@ const Hero = () => {
               scent tells a story. Explore our collection of enchanting perfumes
               curated for the modern, confident, and chic woman. Discover the
               magic of delightful aromas that will leave an everlasting trail of
-              elegance wherever you go.
+              elegance wherever you go
             </p>
 
             {/* btn group */}

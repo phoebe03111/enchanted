@@ -7,10 +7,11 @@ import { Pagination } from "swiper/modules";
 // import swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Product } from "@prisma/client";
+import { Category, Product } from "@prisma/client";
+import Perfume, { ProductWithCategory } from "./Perfume";
 
 interface PopularPerfumesCarouselProps {
-  products: Product[];
+  products: ProductWithCategory[];
 }
 
 const PopularPerfumesCarousel = ({
@@ -30,10 +31,12 @@ const PopularPerfumesCarousel = ({
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[500px] mb-8"
+      className="h-[540px] mb-8"
     >
       {products.map((product) => (
-        <SwiperSlide key={product.id}>{product.name}</SwiperSlide>
+        <SwiperSlide key={product.id}>
+          <Perfume product={product} />
+        </SwiperSlide>
       ))}
     </Swiper>
   );

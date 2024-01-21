@@ -61,10 +61,6 @@
   }
 }
 
-.popular-bike-slider .swipe-wrapper {
-  @apply !h-[500px];
-}
-
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {

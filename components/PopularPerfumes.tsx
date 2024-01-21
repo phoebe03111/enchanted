@@ -5,11 +5,7 @@ import PopularPerfumesCarousel from "./PopularPerfumesCarousel";
 const getProducts = async () => {
   const data = await prisma.product.findMany({
     include: {
-      categories: {
-        select: {
-          name: true,
-        },
-      },
+      categories: true,
     },
   });
   return data;
@@ -29,7 +25,7 @@ const PopularPerfumes = async () => {
 
         <PopularPerfumesCarousel products={products} />
 
-        <Link href="/our-bikes">
+        <Link href="/our-perfumes">
           <button className="btn btn-accent mx-auto">See all perfumes</button>
         </Link>
       </div>

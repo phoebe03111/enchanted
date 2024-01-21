@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 import PopularPerfumesCarousel from "./PopularPerfumesCarousel";
 
-const getProducts = async () => {
+export const getProducts = async () => {
   const data = await prisma.product.findMany({
     include: {
       categories: true,
@@ -13,7 +13,6 @@ const getProducts = async () => {
 
 const PopularPerfumes = async () => {
   const products = await getProducts();
-  console.log(products);
 
   return (
     <section className="py-8">

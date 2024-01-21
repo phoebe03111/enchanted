@@ -16,7 +16,7 @@ const PopularPerfumes = async () => {
   console.log(products);
 
   return (
-    <section className="py-24">
+    <section className="py-8">
       <div className="container mx-auto">
         <h2 className="text-center">Best Sellers</h2>
         <p className="text-center mb-[30px]">

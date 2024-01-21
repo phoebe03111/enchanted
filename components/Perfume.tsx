@@ -32,7 +32,7 @@ const Perfume = ({ product }: PerfumeProps) => {
             src={product.image}
             alt={product.name}
             width={240}
-            height={147}
+            height={140}
           />
         </div>
 

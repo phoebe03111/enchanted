@@ -30,7 +30,7 @@ const PopularPerfumesCarousel = ({
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[540px] mb-8"
+      className="h-[520px] mb-4"
     >
       {products.map((product) => (
         <SwiperSlide key={product.id}>

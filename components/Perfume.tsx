@@ -4,6 +4,7 @@ import { Prisma } from "@prisma/client";
 import { Eye, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCartBtn from "./AddToCartBtn";
 
 interface PerfumeProps {
   product: ProductWithCategory;
@@ -20,7 +21,7 @@ const Perfume = ({ product }: PerfumeProps) => {
 
   return (
     <div className="group">
-      <div className="border h-[328px] mb-5 p-4 overflow-hidden relative">
+      <div className="border h-[328px] mb-5 overflow-hidden relative">
         <div className="bg-primary/5 w-full h-full group-hover:bg-primary/10 transition-all duration-300 flex justify-center items-center">
           {/* badge */}
           {popularPerfumes && (
@@ -38,11 +39,10 @@ const Perfume = ({ product }: PerfumeProps) => {
 
         {/* Buttons */}
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <Link href={`/product/${product.id}`}>
-            <button className="btn-icon btn-primary">
-              <ShoppingBag />
-            </button>
-          </Link>
+          <AddToCartBtn
+            btnStyles="btn-icon btn-accent"
+            icon={<ShoppingBag />}
+          />
           <Link href={`/product/${product.id}`}>
             <button className="btn-icon btn-primary">
               <Eye />

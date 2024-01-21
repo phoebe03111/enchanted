@@ -1,6 +1,7 @@
 "use client";
 
-import { Category, Prisma, Product } from "@prisma/client";
+import { Prisma } from "@prisma/client";
+import { Eye, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,6 +34,20 @@ const Perfume = ({ product }: PerfumeProps) => {
             width={240}
             height={147}
           />
+        </div>
+
+        {/* Buttons */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <Link href={`/product/${product.id}`}>
+            <button className="btn-icon btn-primary">
+              <ShoppingBag />
+            </button>
+          </Link>
+          <Link href={`/product/${product.id}`}>
+            <button className="btn-icon btn-primary">
+              <Eye />
+            </button>
+          </Link>
         </div>
       </div>
 

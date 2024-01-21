@@ -7,7 +7,6 @@ import { Pagination } from "swiper/modules";
 // import swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Category, Product } from "@prisma/client";
 import Perfume, { ProductWithCategory } from "./Perfume";
 
 interface PopularPerfumesCarouselProps {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={rajdhani.className} suppressHydrationWarning>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

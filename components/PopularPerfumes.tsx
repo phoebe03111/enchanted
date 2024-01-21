@@ -15,7 +15,7 @@ const PopularPerfumes = async () => {
   const products = await getProducts();
 
   return (
-    <section className="py-8">
+    <section className="py-24">
       <div className="container mx-auto">
         <h2 className="text-center">Best Sellers</h2>
         <p className="text-center mb-[30px]">

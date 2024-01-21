@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode } from "react";
 import { useShoppingCart } from "use-shopping-cart";
 import { useToast } from "./ui/use-toast";
@@ -5,13 +7,13 @@ import { useToast } from "./ui/use-toast";
 interface AddToCartBtnProps {
   btnStyles: string;
   text?: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   currency: string;
   name: string;
   brand: string;
   image: string;
   price: number;
-  priceId: string;
+  price_id?: string;
 }
 
 const AddToCartBtn = ({
@@ -23,7 +25,7 @@ const AddToCartBtn = ({
   brand,
   image,
   price,
-  priceId,
+  price_id,
 }: AddToCartBtnProps) => {
   const { addItem } = useShoppingCart();
   const { toast } = useToast();
@@ -34,15 +36,15 @@ const AddToCartBtn = ({
     brand,
     image,
     price,
-    priceId,
-  };
+    price_id,
+  };  
 
   return (
     <button
       className={`${btnStyles}`}
       onClick={() => {
         addItem(perfume);
-        toast({ title: `${brand}${name} has been added to the cart` });
+        toast({ title: `Your perfume has been added to the cart!` });
       }}
     >
       <div>{text}</div>

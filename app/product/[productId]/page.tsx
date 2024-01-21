@@ -1,3 +1,4 @@
+import AddToCartBtn from "@/components/AddToCartBtn";
 import prisma from "@/lib/prisma";
 import { Product } from "@prisma/client";
 import {
@@ -60,19 +61,21 @@ const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
                 <p>{product.brand}</p>
                 <p className="text-lg font-semibold mt-2">
                   ${product.price}{" "}
-                  <span className="text-primary ml-2 text-base">({product.size})</span>
+                  <span className="text-primary ml-2 text-base">
+                    ({product.size})
+                  </span>
                 </p>
               </div>
-              {/* <AddToCartBtn
-                price_id={bike.price_id}
-                name={bike.name}
+              <AddToCartBtn
+                price_id={product.stripe_price_id!}
+                name={product.name}
                 currency="CAD"
-                description={bike.description}
-                images={bike.images}
-                price={bike.price}
+                brand={product.brand}
+                image={product.image}
+                price={product.price}
                 text="Add to cart"
                 btnStyles="btn btn-accent"
-              /> */}
+              />
             </div>
             {/* info */}
             <div className="flex flex-col gap-3">

@@ -4,6 +4,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet";
 import { ScrollArea } from "./ui/scroll-area";
 import CartItem from "./CartItem";
+import CheckoutBtn from "./CheckoutBtn";
 
 const CartSidebar = () => {
   const {
@@ -31,8 +32,8 @@ const CartSidebar = () => {
           ) : (
             <ScrollArea className="h-[70vh] xl:h-[74vh] pr-4 mb-4">
               {cartDetails &&
-                Object.entries(cartDetails).map(([key, item]: any): any => (
-                  <CartItem item={item} key={key} />
+                Object.entries(cartDetails).map(([key, item]) => (
+                  <CartItem key={key} item={item} />
                 ))}
             </ScrollArea>
           )}
@@ -45,7 +46,7 @@ const CartSidebar = () => {
               <div>${totalPrice}</div>
             </div>
 
-            {/* <CheckoutBtn /> */}
+            <CheckoutBtn />
           </div>
         )}
       </SheetContent>

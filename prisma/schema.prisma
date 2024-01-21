@@ -11,6 +11,7 @@ generator client {
 model Product {
   id              String     @id @default(uuid())
   name            String
+  description     String?    @db.Text
   brand           String
   size            String
   image           String

@@ -1,13 +1,6 @@
 import AddToCartBtn from "@/components/AddToCartBtn";
 import prisma from "@/lib/prisma";
-import { Product } from "@prisma/client";
-import {
-  ChevronLeft,
-  Clock,
-  PackageCheck,
-  RefreshCw,
-  SprayCan,
-} from "lucide-react";
+import { ChevronLeft, Clock, PackageCheck, RefreshCw } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -57,9 +50,10 @@ const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
             </Link>
             <div className="flex flex-col gap-6 items-start">
               <div>
-                <h3>{product.name}</h3>
-                <p>{product.brand}</p>
-                <p className="text-lg font-semibold mt-2">
+                <h4 className="mb-0 text-base">{product.brand}</h4>
+                <h4 className="mb-2 font-normal border-b w-fit">{product.name}</h4>
+                <p className="my-4">{product.description}</p>
+                <p className="text-lg font-semibold">
                   ${product.price}{" "}
                   <span className="text-primary ml-2 text-base">
                     ({product.size})

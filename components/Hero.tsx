@@ -8,12 +8,12 @@ const Hero = () => {
         <div className="flex items-center justify-between">
           {/* text */}
           <div className="w-full xl:max-x-[580px] md:h-[820px] flex flex-col justify-center items-start">
-            <h2 className="text-center xl:text-left mb-6">
+            <h2 className="text-center xl:text-left mx-auto xl:mx-0 mb-6">
               Where Elegance Meets Enchantment
               <br />
               in Every Scent
             </h2>
-            <p className="mb-10 text-lg max-w-[508px] mx-auto text-center xl:text-left xl:mx-0">
+            <p className="mb-10 text-lg max-w-[580px] mx-auto text-center xl:text-left xl:mx-0">
               Immerse yourself in a world of captivating fragrances, where every
               scent tells a story. Explore our collection of enchanting perfumes
               curated for the modern, confident, and chic woman. Discover the

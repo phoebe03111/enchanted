@@ -10,10 +10,9 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY!}
       successUrl={`${process.env.NEXT_PUBLIC_APP_URL}/stripe/success`}
-      cancelUrl={`${process.env.NEXT_PUBLIC_APP_URL}/stripe/error`}
+      cancelUrl={`${process.env.NEXT_PUBLIC_APP_URL}/our-perfumes`}
       language="en-US"
       currency="CAD"
-      billingAddressCollection={true}
       shouldPersist={true}
     >
       {children}

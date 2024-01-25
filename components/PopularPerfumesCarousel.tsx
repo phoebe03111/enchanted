@@ -2,7 +2,7 @@
 
 // import swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Keyboard, Mousewheel } from "swiper/modules";
 
 // import swiper styles
 import "swiper/css";
@@ -29,7 +29,9 @@ const PopularPerfumesCarousel = ({
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      modules={[Pagination, Keyboard, Mousewheel]}
+      keyboard={true}
+      mousewheel={true}
       className="h-[520px] mb-4"
     >
       {products.map((product) => (

@@ -17,7 +17,7 @@ Enchanted Scents is an enchanting e-commerce project built with Next.js. This pl
 
 ## Tech Stack
 
-Next.js, TypeScript, Prisma, TailwindCSS, Stripe API
+Next.js, TypeScript, Prisma, Neon (Serverless Postgre), Stripe API and Tailwind CSS
 
 ## Demo
 

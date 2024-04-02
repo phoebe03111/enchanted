@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Minus, Plus, X } from "lucide-react";
 
 const CartItem = ({ item }: any) => {
-  const { removeItem, incrementItem, decrementItem } = useShoppingCart();
+    const { removeItem, incrementItem, decrementItem } = useShoppingCart();
 
   return (
     <div className="flex w-full justify-between items-center h-[120px] mb-4 border-b">
